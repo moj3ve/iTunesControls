@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01E05CF124C4368A00F5F99E /* iTunesControls.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E05CEF24C4368A00F5F99E /* iTunesControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01E05CF824C436A300F5F99E /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E05CF724C436A300F5F99E /* iTunes.swift */; };
+		01E05CFA24C436B300F5F99E /* PlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E05CF924C436B300F5F99E /* PlayerState.swift */; };
+		01E05CFC24C436ED00F5F99E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E05CFB24C436ED00F5F99E /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01E05CEC24C4368A00F5F99E /* iTunesControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iTunesControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		01E05CEF24C4368A00F5F99E /* iTunesControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunesControls.h; sourceTree = "<group>"; };
 		01E05CF024C4368A00F5F99E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E05CF724C436A300F5F99E /* iTunes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
+		01E05CF924C436B300F5F99E /* PlayerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerState.swift; sourceTree = "<group>"; };
+		01E05CFB24C436ED00F5F99E /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +50,10 @@
 		01E05CEE24C4368A00F5F99E /* iTunesControls */ = {
 			isa = PBXGroup;
 			children = (
-				01E05CEF24C4368A00F5F99E /* iTunesControls.h */,
 				01E05CF024C4368A00F5F99E /* Info.plist */,
+				01E05CF724C436A300F5F99E /* iTunes.swift */,
+				01E05CF924C436B300F5F99E /* PlayerState.swift */,
+				01E05CFB24C436ED00F5F99E /* Track.swift */,
 			);
 			path = iTunesControls;
 			sourceTree = "<group>";
@@ -59,7 +65,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E05CF124C4368A00F5F99E /* iTunesControls.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,7 @@
 				TargetAttributes = {
 					01E05CEB24C4368A00F5F99E = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -131,6 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E05CFA24C436B300F5F99E /* PlayerState.swift in Sources */,
+				01E05CF824C436A300F5F99E /* iTunes.swift in Sources */,
+				01E05CFC24C436ED00F5F99E /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +268,7 @@
 		01E05CF524C4368A00F5F99E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -272,9 +282,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MinhTon.iTunesControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -282,6 +294,7 @@
 		01E05CF624C4368A00F5F99E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -295,6 +308,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MinhTon.iTunesControls;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
