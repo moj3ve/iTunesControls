@@ -30,17 +30,20 @@ open class iTunesControls: NSObject {
             case .playing:
                 _ = iTunesControls.executeAppleScriptWithString("play")
             }
+            NotificationCenter.default.post(name: Notification.Name(rawValue: InternalNotification.key), object: self)
         }
     }
     
     public static func playNext(_ completionHandler: (()->())? = nil){
         _ = iTunesControls.executeAppleScriptWithString("play (next track)")
         completionHandler?()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: InternalNotification.key), object: self)
     }
     
     public static func playPrevious(_ completionHandler: (() -> ())? = nil){
         _ = iTunesControls.executeAppleScriptWithString("play (previous track)")
         completionHandler?()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: InternalNotification.key), object: self)
     }
     
     
@@ -54,12 +57,14 @@ open class iTunesControls: NSObject {
         }
         _ = iTunesControls.startiTunes(option: option)
         completionHandler?()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: InternalNotification.key), object: self)
     }
     
     
     public static func activateiTunes(completionHandler: (() -> ())? = nil){
         _ = iTunesControls.activateiTunes()
         completionHandler?()
+        NotificationCenter.default.post(name: Notification.Name(rawValue: InternalNotification.key), object: self)
     }
     
     static func executeAppleScriptWithString(_ command: String) -> String? {

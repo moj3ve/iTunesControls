@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0131AC0F24C5306700BC7875 /* InternalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0131AC0E24C5306700BC7875 /* InternalNotification.swift */; };
 		01E05CF824C436A300F5F99E /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E05CF724C436A300F5F99E /* iTunes.swift */; };
 		01E05CFA24C436B300F5F99E /* PlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E05CF924C436B300F5F99E /* PlayerState.swift */; };
 		01E05CFC24C436ED00F5F99E /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E05CFB24C436ED00F5F99E /* Track.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0131AC0E24C5306700BC7875 /* InternalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalNotification.swift; sourceTree = "<group>"; };
 		01E05CEC24C4368A00F5F99E /* iTunesControls.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iTunesControls.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E05CF024C4368A00F5F99E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01E05CF724C436A300F5F99E /* iTunes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				01E05CF724C436A300F5F99E /* iTunes.swift */,
 				01E05CF924C436B300F5F99E /* PlayerState.swift */,
 				01E05CFB24C436ED00F5F99E /* Track.swift */,
+				0131AC0E24C5306700BC7875 /* InternalNotification.swift */,
 			);
 			path = iTunesControls;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E05CFA24C436B300F5F99E /* PlayerState.swift in Sources */,
+				0131AC0F24C5306700BC7875 /* InternalNotification.swift in Sources */,
 				01E05CF824C436A300F5F99E /* iTunes.swift in Sources */,
 				01E05CFC24C436ED00F5F99E /* Track.swift in Sources */,
 			);
